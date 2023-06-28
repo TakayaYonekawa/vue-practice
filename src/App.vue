@@ -1,9 +1,12 @@
 <script setup>
-  const answer = 2
+import { computed } from "vue";
+
+const answer = computed(() => {
+  return 1 + 1;
+});
 </script>
 
 <template>
   <h1>Vue 3</h1>
-  <p>1 + 1 = {{answer}}</p>
+  <p>1 + 1 = {{ answer }}</p>
 </template>
-
