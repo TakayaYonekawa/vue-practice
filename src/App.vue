@@ -5,7 +5,9 @@ import {ref, computed } from "vue";
 //   return 1 + 1;
 // });
 
-const message = 'ようこそ　<strong>ヨネ</strong>さん'
+const message = computed(() => {
+  return 'ようこそ　<strong>' + myname.value +'</strong>さん'
+})
 const welecomeColor = 'blue'
 const myname = ref('')
 </script>
@@ -13,5 +15,5 @@ const myname = ref('')
 <template>
   <h1>Vue 3</h1>
   <p>お名前は？：<input type="text" size="10" v-model="myname"></p>
-  <p v-html="myname" :style="{backgroundColor:welecomeColor, 'color': 'white'}" ></p>
+  <p v-html="message" :style="{backgroundColor:welecomeColor, 'color': 'white'}" ></p>
 </template>
