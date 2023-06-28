@@ -20,6 +20,6 @@ import { ref } from "vue";
   <button @click="addTodo()">追加</button>
 
   <ul>
-    <li v-for="(todo, i) in todos" :key="i"> {{todo}} <span @click="removeTodo(i)">x</span> </li>
+    <li v-for="(todo, i) in todos" :key="i"> {{todo}} <span @click="removeTodo(i)" style="cursor: pointer;">x</span> </li>
   </ul>
 </template>
