@@ -7,6 +7,11 @@ import { ref } from "vue";
     todos.value.push(newTodo.value)
     newTodo.value = ''
   }
+
+  const removeTodo = (index) => {
+    todos.value.splice(index, 1)
+  }
+
 </script>
 
 
@@ -15,6 +20,6 @@ import { ref } from "vue";
   <button @click="addTodo()">追加</button>
 
   <ul>
-    <li v-for="(todo, i) in todos" :key="i">{{i}} {{todo}}</li>
+    <li v-for="(todo, i) in todos" :key="i"> {{todo}} <span @click="removeTodo(i)">x</span> </li>
   </ul>
 </template>
