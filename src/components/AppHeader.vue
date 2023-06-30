@@ -4,6 +4,6 @@
 
 <template>
   <header>
-    <h1 :style="{ 'color' :color }" >ToDoツール</h1>
+    <h1 :style="{ 'color' :color }" ><slot></slot></h1>
   </header>
 </template>
