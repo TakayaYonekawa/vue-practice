@@ -18,7 +18,7 @@ import { ref } from "vue";
 
 <template>
 
-  <AppHeader/>
+  <AppHeader color="red"/>
   <input type="text" size="30" v-model="newTodo">
   <button @click="addTodo()">追加</button>
 
