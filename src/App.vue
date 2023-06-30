@@ -19,7 +19,7 @@ import { ref } from "vue";
   <input type="text" size="30" v-model="newTodo">
   <button @click="addTodo()">追加</button>
 
-  <ul>
+  <ul v-show="todos.length > 0">
     <li v-for="(todo, i) in todos" :key="i"> {{todo}} <span @click="removeTodo(i)" style="cursor: pointer;">x</span> </li>
   </ul>
 </template>
