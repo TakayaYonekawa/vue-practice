@@ -1,4 +1,5 @@
 <script setup>
+import AppHeader from './components/AppHeader.vue'
 import { ref } from "vue";
   const todos = ref([])
   const newTodo = ref('')
@@ -16,6 +17,8 @@ import { ref } from "vue";
 
 
 <template>
+
+  <AppHeader/>
   <input type="text" size="30" v-model="newTodo">
   <button @click="addTodo()">追加</button>
 
